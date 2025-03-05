@@ -26,6 +26,7 @@ header img {
     border-radius: 50%;
     object-fit: cover;
     background-color: #fff;
+    border: dotted #fff 1px;
 }
 
 header p {
@@ -42,6 +43,7 @@ header p {
 
 .header-content h1 {
     margin: 0;
+    text-shadow: 5px 5px 5px #00000077;
 }
 
 .desc {
@@ -49,17 +51,27 @@ header p {
     flex-direction: column;
     gap: 20px;
     font-weight: 300;
-    max-width: 750px;
+    max-width: 500px;
 }
 
-.desc a {
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons button {
+    flex: 1;
     font-weight: bold;
-    padding: 5px 50px;
+    padding: 10px 35px;
     border-radius: 5px 0;
     border: none;
-    background-color: #0000005e;
+    background-color: #000000e3;
+    box-shadow: 5px 5px #0000006e;
     color: #fff;
-    text-decoration: none;
+}
+
+.buttons button:hover {
+    cursor: pointer;
 }
 
 .linguagens {
@@ -68,28 +80,28 @@ header p {
     gap: 15px;
 }
 
-header .linguagens i:hover {
+header .linguagens i:hover, .desc a:hover {
     color: #646060;
 }
 
-.projetos {
+.projetos, .formacoes {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     background-color: #000000d2;
-    padding: 35px;
+    padding: 30px;
 }
 
-.projetos-info {
+.projetos-info, .formacoes-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
 }
 
-.projetos-info p {
-    align-items: center;
+.projetos-info h2, .formacoes-info h2 {
+    text-shadow: 5px 5px 5px #00000077;
 }
 
 .projetos-cards {
@@ -108,6 +120,7 @@ header .linguagens i:hover {
     width: 255px;
     position: relative;
     border-radius: 10px;
+    box-shadow: 15px 15px #0000006b;
 }
 
 .proj-card-bottom {
@@ -141,8 +154,126 @@ header .linguagens i:hover {
     list-style: none;
 }
 
-footer {
+.formacoes {
+    position: relative;
     background-color: #000000d6;
+}
+
+.formacoes-itens {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formacoes-item {
+    background-color: #646060;
+    padding: 15px;
+}
+
+.formacoes-item p {
+    color: #fff;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+}
+
+.left-container {
+    left: 0;
+}
+
+.right-container {
+    left: 50%;
+}
+
+.left-container img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    right: -25px;
+    top: 28px;
+    z-index: 10;
+}
+
+.right-container img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 7px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    left: -25px;
+    top: 28px;
+    z-index: 10;
+}
+
+.text-box {
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.text-box h3 {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.left-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+footer {
+    background-color: #000000d2;
     color: #fff;
     padding: 25px 25px 5px 25px;
 }
@@ -168,10 +299,6 @@ footer #direitos {
 footer .contatos, .acessos {
     display: flex;
     flex-direction: column;
-}
-
-footer .contatos, .acessos h2{
-    text-align: center;
 }
 
 .acessos a:hover {
