@@ -281,8 +281,8 @@ footer {
 footer .topicos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 0 500px;
+    place-content: center;
+    gap: 50px;
     margin-bottom: 15px;
 }
 
@@ -301,7 +301,7 @@ footer .contatos, .acessos {
     flex-direction: column;
 }
 
-.acessos a:hover {
+.acessos a:hover, .contatos a:hover {
     color: #646060;
     text-decoration: underline;
 }
@@ -374,5 +374,6 @@ footer .contatos, .acessos {
         padding: 0 20px;
         text-align: center;
         align-items: center;
+        gap: 0;
     }
 }
